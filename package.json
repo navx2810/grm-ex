@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "poi"
 	},
 	"keywords": [],
 	"author": "Matt Fetterman <navx2810@gmail.com>",
