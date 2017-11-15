@@ -1,0 +1,28 @@
+{
+	"name": "ex",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Matt Fetterman <navx2810@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"poi": "^9.5.1",
+		"pug": "^2.0.0-rc.4",
+		"pug-loader": "^2.3.0",
+		"stylus": "^0.54.5",
+		"stylus-loader": "^3.0.1"
+	},
+	"dependencies": {
+		"bootstrap": "^4.0.0-alpha.6",
+		"jquery": "^3.2.1"
+	},
+	"poi": {
+		"html": {
+			"template": "./index.html"
+		}
+	}
+}
