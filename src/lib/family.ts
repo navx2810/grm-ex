@@ -4,7 +4,7 @@ interface Phone {
 }
 export class Family {
     ID: number = 0
-    Name: String
-    Phone: Phone
-    Email: String
+    Name: String = null
+    Phone: Phone = { Primary: null, Secondary: null }
+    Email: String = null
 }
