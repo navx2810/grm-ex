@@ -1,9 +1,9 @@
 import { FormsModule } from '@angular/forms';
 import { FamilyService } from './family.service';
-import routes from './routes';
+import {Routes} from './routes';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from "@angular/router"
+import { RouterModule } from "@angular/router"
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -28,7 +28,7 @@ import { FamilyListComponent } from './manage/family/family-list/family-list.com
 	],
 	imports: [
 		BrowserModule,
-		RouterModule.forRoot(routes, { enableTracing: true }),
+		RouterModule.forRoot(Routes, { enableTracing: true }),
 		FormsModule
 	],
 	providers: [PetService, FamilyService],

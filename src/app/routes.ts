@@ -3,7 +3,7 @@ import { PetComponent } from './manage/pet/pet.component';
 import { ManageComponent } from './manage/manage.component';
 import { SoonComponent } from "./soon/soon.component";
 
-export default [
+export const Routes = [
     { path: 'schedule', component: SoonComponent },
     {
 		path: 'manage',
