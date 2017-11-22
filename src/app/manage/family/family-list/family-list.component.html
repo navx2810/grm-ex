@@ -1,3 +1,15 @@
-<ul>
-	<li *ngFor="let fam of families">{{fam.Name}}</li>
+<div class="form-group">
+	<input disabled [(ngModel)]="searchTerm" placeholder="Enter a search term.." type="text" class="text-center form-control">
+</div>
+<ul class="list-unstyled">
+	<li *ngFor="let fam of families">
+		<div class="row">
+			<p class="col">{{fam.Name}}</p>
+			<div class="col"></div>
+			<div class="col">
+				<button (click)="delete(fam)" class="btn btn-danger">Delete</button>
+				<button (click)="edit(fam)" disabled class="btn btn-success btn-disabled">Edit</button>
+			</div>
+		</div>
+	</li>
 </ul>

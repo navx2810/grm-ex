@@ -1,5 +1,5 @@
 import { FamilyService } from '../../../family.service';
-import { Family } from '../../../../lib/family';
+import { Family } from '../../../../lib/models/family';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -18,9 +18,9 @@ export class FamilyEditorComponent implements OnInit {
 	}
 
 	create() {
-		this.familyService.Collection.push(this.source)
+		// this.familyService.Collection.push(this.source)
+		this.familyService.Add(this.source)
 		this.clear()
-		this.familyService.Save()
 	}
 
 	clear() {
