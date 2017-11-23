@@ -1,26 +1,27 @@
 <form #familyEditor="ngForm">
+	<pre>{{selected | json}}</pre>
 	<div class="form-group">
 		<label>Name</label>
-		<input [(ngModel)]="source.Name" name="name" type="text" class="form-control">
+		<input [(ngModel)]="selected.Name" name="name" type="text" class="form-control">
 	</div>
 	<div class="form-group">
 		<label>Email</label>
-		<input [(ngModel)]="source.Email" name="email" type="email" class="form-control">
+		<input [(ngModel)]="selected.Email" name="email" type="email" class="form-control">
 	</div>
 	<div class="form-group">
 		<div class="row">
 			<div class="col">
 				<label>Primary Phone</label>
-				<input [(ngModel)]="source.Phone.Primary" name="phone.primary" type="tel" class="form-control">
+				<input [(ngModel)]="selected.Phone.Primary" name="phone.primary" type="tel" class="form-control">
 			</div>
 			<div class="col">
 				<label>Secondary Phone</label>
-				<input [(ngModel)]="source.Phone.Secondary" name="phone.secondary" type="tel" class="form-control">
+				<input [(ngModel)]="selected.Phone.Secondary" name="phone.secondary" type="tel" class="form-control">
 			</div>
 		</div>
 	</div>
 	<div class="text-right">
 		<button type="button" (click)="clear()" class="btn btn-outline-danger">Clear</button>
-		<button type="submit" (click)="create()" class="btn btn-outline-success">Create</button>
+		<button type="submit" (click)="save(selected)" class="btn btn-outline-success">Create</button>
 	</div>
 </form>

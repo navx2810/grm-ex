@@ -2,13 +2,13 @@
 	<input disabled [(ngModel)]="searchTerm" placeholder="Enter a search term.." type="text" class="text-center form-control">
 </div>
 <ul class="list-unstyled">
-	<li *ngFor="let fam of families">
+	<li *ngFor="let fam of source">
 		<div class="row">
 			<p class="col">{{fam.Name}}</p>
 			<div class="col"></div>
 			<div class="col">
 				<button (click)="delete(fam)" class="btn btn-danger">Delete</button>
-				<button (click)="edit(fam)" disabled class="btn btn-success btn-disabled">Edit</button>
+				<button (click)="edit(fam)" class="btn btn-success">Edit</button>
 			</div>
 		</div>
 	</li>

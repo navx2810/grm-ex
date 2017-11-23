@@ -2,6 +2,7 @@ import { FamilyService } from '../../../family.service';
 import { Component, OnInit } from '@angular/core';
 import { ListComponent } from '../../../../lib/list-component';
 import { Family } from '../../../../lib/models/family';
+import { ManageService } from '../../../manage.service';
 
 @Component({
 	selector: 'family-list',
@@ -12,22 +13,13 @@ export class FamilyListComponent extends ListComponent<Family> implements OnInit
 
 	searchTerm = ""
 
-	get families() { return this.service }
-
-	constructor(private familyService: FamilyService) {
-		super()
+	constructor(private familyService: FamilyService, manage: ManageService) {
+		super(manage)
 		this.service = familyService
 	}
 
 	ngOnInit() {
+		this.source = this.familyService.Collection
 	}
-
-	// delete(family) {
-	// 	this.service.Remove(family)
-	// }
-
-	// edit(family) {
-
-	// }
 
 }

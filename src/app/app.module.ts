@@ -14,6 +14,7 @@ import { PetComponent } from './manage/pet/pet.component';
 import { FamilyComponent } from './manage/family/family.component';
 import { FamilyEditorComponent } from './manage/family/family-editor/family-editor.component';
 import { FamilyListComponent } from './manage/family/family-list/family-list.component';
+import { ManageService } from './manage.service';
 
 @NgModule({
 	declarations: [
@@ -31,7 +32,7 @@ import { FamilyListComponent } from './manage/family/family-list/family-list.com
 		RouterModule.forRoot(Routes, { enableTracing: true }),
 		FormsModule
 	],
-	providers: [PetService, FamilyService],
+	providers: [PetService, FamilyService, ManageService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

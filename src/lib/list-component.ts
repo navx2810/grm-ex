@@ -1,13 +1,18 @@
 import { CRUDService } from "./crud-service"
+import { ManageService } from "../app/manage.service";
 
-export class ListComponent<T> {
+export abstract class ListComponent<T> {
 
-    service: CRUDService<T>
+	constructor(private manage: ManageService) {}
 
-    edit(t: T) {
-        this.service.Update(t)
-    }
+	service: CRUDService<T>
+	
+	source: Array<T>
 
+    edit(entity: T) {
+		this.manage.editing.emit(entity)
+	}
+	
     delete(t: T) {
         if(confirm("Remove this item?")) {
             this.service.Remove(t)
