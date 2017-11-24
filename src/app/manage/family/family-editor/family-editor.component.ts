@@ -30,6 +30,8 @@ export class FamilyEditorComponent extends EditorComponent<Family> implements On
 	// }
 
 	clear() {
+		debugger
+		super.close()
 		this.source = new Family()
 	}
 

@@ -25,6 +25,17 @@ export abstract class EditorComponent<T> implements OnInit {
 	
 	abstract clear()
 
-	abstract save(entity: T)
+    abstract save(entity: T)
+    
+    close() {
+        this.source = null
+        this.editing = null
+    }
+
+    cancel() {
+        debugger
+        Object.assign(this.editing, this.base)
+        this.cancel()
+    }
 
 }
